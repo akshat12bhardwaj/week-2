@@ -30,8 +30,24 @@ A collection of animated buttons designed to explore different hover and click e
 **Goal:**
 To gain hands-on experience with UI animations and understand how small visual effects can make interfaces feel more responsive and polished.
 
-### Project 2 – Coming Soon
+### Project 2 – Animated Cards
 
+A responsive card component project designed to explore different hover animations and visual effects commonly used in modern web interfaces. This project focuses on creating engaging interactions through motion, depth, and smooth transitions while maintaining a clean and responsive layout.
+
+### Concepts Practiced:
+
+- Responsive layouts with Flexbox
+- Media queries
+- Hover state styling
+- Smooth transitions
+- Transform animations (translateY, scale)
+- Box shadow effects
+- Interactive button animations
+- Mobile-first design principles
+
+### Goal:
+
+To gain hands-on experience building interactive card components, understand how hover animations improve user engagement, and reinforce responsive design techniques used in modern websites.
 ### Project 3 – Coming Soon
 
 ## Learning Outcome
