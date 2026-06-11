@@ -1,0 +1,204 @@
+/* @link https://utopia.fyi/space/calculator?c=320,14,1.2,1600,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  --space-3xs: clamp(0.25rem, 0.2344rem + 0.0781vw, 0.3125rem);
+  --space-2xs: clamp(0.4375rem, 0.3906rem + 0.2344vw, 0.625rem);
+  --space-xs: clamp(0.6875rem, 0.625rem + 0.3125vw, 0.9375rem);
+  --space-s: clamp(0.875rem, 0.7813rem + 0.4688vw, 1.25rem);
+  --space-m: clamp(1.3125rem, 1.1719rem + 0.7031vw, 1.875rem);
+  --space-l: clamp(1.75rem, 1.5625rem + 0.9375vw, 2.5rem);
+  --space-xl: clamp(2.625rem, 2.3438rem + 1.4063vw, 3.75rem);
+  --space-2xl: clamp(3.5rem, 3.125rem + 1.875vw, 5rem);
+  --space-3xl: clamp(5.25rem, 4.6875rem + 2.8125vw, 7.5rem);
+
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.25rem, 0.1563rem + 0.4688vw, 0.625rem);
+  --space-2xs-xs: clamp(0.4375rem, 0.3125rem + 0.625vw, 0.9375rem);
+  --space-xs-s: clamp(0.6875rem, 0.5469rem + 0.7031vw, 1.25rem);
+  --space-s-m: clamp(0.875rem, 0.625rem + 1.25vw, 1.875rem);
+  --space-m-l: clamp(1.3125rem, 1.0156rem + 1.4844vw, 2.5rem);
+  --space-l-xl: clamp(1.75rem, 1.25rem + 2.5vw, 3.75rem);
+  --space-xl-2xl: clamp(2.625rem, 2.0313rem + 2.9688vw, 5rem);
+  --space-2xl-3xl: clamp(3.5rem, 2.5rem + 5vw, 7.5rem);
+
+  /* Custom pairs */
+  --space-s-l: clamp(0.875rem, 0.4688rem + 2.0313vw, 2.5rem);
+
+
+  /*Colors*/
+
+  --background-color:#E4FDE1;
+  --text-color:#575761;
+  --Input-Fields-Border-color:#648381;
+  --Active-Field-Highlight:#8ACB88;
+  --Sign-up-color:#FFBF46;
+}
+/*Utility*/
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    /* outline: 1px solid red; */
+}
+
+@media(min-width:320px){
+    body{
+      overflow: hidden;
+      min-height: 100vh;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-xl-2xl);
+      font-size: var(--space-l);
+    }
+    body>div{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap:var(--space-2xs-xs);
+      font-size: var(--space-s);
+    }
+    .active-1{
+      text-align: center;
+      height: 50vh;
+      width: 100vw;
+    }
+    .active-1>h1{
+      color: var(--text-color);
+      font-size: var(--space-xl);
+    }
+    .active-1>form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      gap:var(--space-xs-s);
+    }
+    .active-1>form input{
+      border: 2px solid var(--Input-Fields-Border-color);
+      font-size: var(--space-s);
+      transition: all 0.5s ease-in ;
+      padding: 1rem;
+    }
+    input:hover{
+      transform: scale(1.1);
+
+      box-shadow: 2px 2px 5px ;
+    }
+
+    input:focus{
+      background-color: var(--Active-Field-Highlight);
+    }
+    .active-1>form>button{
+      background-color: var(--Sign-up-color);
+      color: var(--text-color);
+      padding: 1rem;
+      border-color: var(--Input-Fields-Border-color);
+    }
+    .active-2{
+      width: 100vw;
+      height: 50%;
+      gap:var(--space-m-l);
+    }
+    .dark-green-mode{
+      background-color:var(--Input-Fields-Border-color) ;
+      color: var(--background-color);
+      position: absolute;
+      text-align: center;
+      top: 50%;
+    }
+    .form-mode{
+      position: absolute;
+      top: 0%;
+    }
+     .dark-green-mode-inverse{
+      background-color:var(--Input-Fields-Border-color) ;
+      color: var(--background-color);
+      position: absolute;
+      text-align: center;
+      top: 0%;
+    }
+    
+    .form-mode-inverse{
+      position: absolute;
+      height: 50vh;
+      top: 50%;
+    }
+    .active-2>h1{
+      color: var(--background-color);
+    }
+    .active-1>form>p{
+      transition: all 0.3s ease-in;
+      cursor: pointer;
+    }
+    .active-1>form>p:hover{
+      color: blue;
+    }
+    .active-2>button{
+      background-color: transparent;
+      color: var(--background-color);
+      padding: 1rem;
+      border-color: var(--background-color);
+    }
+    .active-2>button,.active-1>form>button{
+      transition: all 0.5s ease-in;
+    }
+    .active-2>button:hover,.active-1>form>button:hover{
+      box-shadow: 3px 3px 5px;
+      cursor: pointer;
+    }
+    .disable-up{
+        transform: translateY(-100vh);
+    }
+    .disable-down{
+        transform: translateY(100vh);
+    }
+    .active-1,.active-2{
+      transition: all  1s ease-in-out;
+    }
+}
+
+@media(min-width:1200px){
+  
+  body{
+      display:flex;
+      flex-direction:row;
+      align-items: center;
+    }
+
+   .active-1,.active-2{
+        position: static;
+        min-width: 50%;
+        min-height: 100%;
+    }
+
+    .disable-up{
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    .disable-down{
+      transform: translateX(100vw);
+      opacity: 0;
+    }
+
+    .dark-green-mode{
+      background-color:var(--Input-Fields-Border-color) ;
+      color: var(--background-color);
+      text-align: center;
+      height: 100vh;
+    }
+
+    .dark-green-mode-inverse{
+      background-color:var(--Input-Fields-Border-color) ;
+      color: var(--background-color);
+      position: absolute;
+      width: 50%;
+    }
+    .form-mode-inverse{
+      margin-left:25%;
+    }
+}
+
