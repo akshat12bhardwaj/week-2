@@ -48,7 +48,26 @@ A responsive card component project designed to explore different hover animatio
 ### Goal:
 
 To gain hands-on experience building interactive card components, understand how hover animations improve user engagement, and reinforce responsive design techniques used in modern websites.
-### Project 3 – Coming Soon
+
+### Project 3 – Modern Login Page
+
+A responsive login and signup interface inspired by modern authentication pages. This project focuses on creating smooth transitions between login and signup states while maintaining a clean and user-friendly design across different screen sizes.
+
+### Concepts Practiced
+
+- Responsive layouts with Flexbox
+- Media queries
+- CSS transitions and transforms
+- Form state switching with JavaScript
+- Class toggling and DOM manipulation
+- Hover and focus effects
+- CSS variables and fluid spacing with `clamp()`
+- Mobile-first design principles
+- Interactive UI animations
+
+### Goal
+
+To gain hands-on experience building a complete responsive form interface, understand how transitions improve user experience, and reinforce the integration of JavaScript with CSS for creating dynamic and interactive web components.
 
 ## Learning Outcome
 
