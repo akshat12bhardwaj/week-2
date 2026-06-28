@@ -1,0 +1,263 @@
+/* @link https://utopia.fyi/space/calculator?c=320,14,1.2,1600,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+    --space-3xs: clamp(0.25rem, 0.2344rem + 0.0781vw, 0.3125rem);
+    --space-2xs: clamp(0.4375rem, 0.3906rem + 0.2344vw, 0.625rem);
+    --space-xs: clamp(0.6875rem, 0.625rem + 0.3125vw, 0.9375rem);
+    --space-s: clamp(0.875rem, 0.7813rem + 0.4688vw, 1.25rem);
+    --space-m: clamp(1.3125rem, 1.1719rem + 0.7031vw, 1.875rem);
+    --space-l: clamp(1.75rem, 1.5625rem + 0.9375vw, 2.5rem);
+    --space-xl: clamp(2.625rem, 2.3438rem + 1.4063vw, 3.75rem);
+    --space-2xl: clamp(3.5rem, 3.125rem + 1.875vw, 5rem);
+    --space-3xl: clamp(5.25rem, 4.6875rem + 2.8125vw, 7.5rem);
+
+    /* One-up pairs */
+    --space-3xs-2xs: clamp(0.25rem, 0.1563rem + 0.4688vw, 0.625rem);
+    --space-2xs-xs: clamp(0.4375rem, 0.3125rem + 0.625vw, 0.9375rem);
+    --space-xs-s: clamp(0.6875rem, 0.5469rem + 0.7031vw, 1.25rem);
+    --space-s-m: clamp(0.875rem, 0.625rem + 1.25vw, 1.875rem);
+    --space-m-l: clamp(1.3125rem, 1.0156rem + 1.4844vw, 2.5rem);
+    --space-l-xl: clamp(1.75rem, 1.25rem + 2.5vw, 3.75rem);
+    --space-xl-2xl: clamp(2.625rem, 2.0313rem + 2.9688vw, 5rem);
+    --space-2xl-3xl: clamp(3.5rem, 2.5rem + 5vw, 7.5rem);
+
+    /* Custom pairs */
+    --space-s-l: clamp(0.875rem, 0.4688rem + 2.0313vw, 2.5rem);
+}
+
+* {
+    padding: 0%;
+    margin: 0%;
+    /* outline: 1px solid red; */
+    box-sizing: border-box;
+}
+
+@media(min-width:320px) {
+    body {
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    h1 {
+        margin: 1rem;
+        animation: fade 2s ease-out forwards;
+    }
+
+    @keyframes fade {
+        0% {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0%);
+            opacity: 1;
+        }
+    }
+
+    .ball {
+        background-color: greenyellow;
+        height: 100px;
+        width: 100px;
+        margin: 2rem;
+        border-radius: 50px;
+        animation: bounce 2s ease-in-out 0s infinite alternate forwards;
+        
+    }
+    .ball:hover{
+        animation-play-state: paused
+    }
+
+    @keyframes bounce {
+        0% {
+            transform: translateY(0%);
+        }
+
+        100% {
+            transform: translateY(0%);
+        }
+    }
+
+    .load {
+        width: 100px;
+        border-radius: 50%;
+        height: 100px;
+        border: 6px solid grey;
+        border-top-color: aqua;
+        margin: 2rem;
+        animation: loading 3s linear infinite forwards;
+    }
+
+    @keyframes loading {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    button {
+        padding: 2rem;
+        height: fit-content;
+        margin: 2rem;
+        background-color: blanchedalmond;
+        border: none;
+        animation: pulse 3s ease-in-out 0s infinite alternate none;
+    }
+
+    @keyframes pulse {
+        from {
+            transform: scale(1);
+        }
+
+        to {
+            transform: scale(1.1);
+        }
+    }
+
+    .card {
+        height: 100px;
+        width: 100px;
+        margin: 2rem;
+        background-color: cyan;
+        animation: float 2s ease-in 0s infinite alternate none;
+    }
+
+    @keyframes float {
+        from {
+            transform: translateY(-10px);
+            box-shadow: 0px 5px 20px white;
+        }
+
+        to {
+            transform: translateY(0);
+            box-shadow: 0px 2px 3px white
+        }
+    }
+
+    .boxes {
+        display: flex;
+        background-color: grey;
+        height: 300px;
+        width: 500px;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        margin: 2rem;
+    }
+
+    .box1,
+    .box2,
+    .box3{
+        height: 100px;
+        transform: translateY(100px);
+        opacity: 0;
+        width: 100px;
+        background-color: green;
+        z-index: 1;
+        position: relative;
+    }
+
+    .box1 {
+        animation: slide-in 2s ease 0s 1 forwards;
+    }
+
+    .box2 {
+        animation: slide-in 2s ease 2s 1 forwards;
+    }
+
+    .box3 {
+        animation: slide-in 2s ease 4s 1 forwards;
+    }
+
+    @keyframes slide-in {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    /* Animation direction */
+
+    .boxes-uni{
+         display: flex;
+        background-color: grey;
+        width: 500px;
+        justify-content: center;
+        gap: 2rem;
+        padding: 2rem;
+        margin: 2rem;
+        flex-direction: column;
+    }
+
+    .box4,.box5,.box6,.box7{
+        height: 100px;
+        width: 100px;
+        background-color: green;
+        z-index: 1;
+        position: relative;
+        animation: move-x 2s ease 0s infinite forwards;
+    }
+    .box5{
+        animation-direction: reverse;
+    }
+    .box6{
+        animation-direction: alternate;
+    }
+    .box7{
+        animation-direction: alternate-reverse;
+    }
+
+    @keyframes move-x {
+        from{
+            transform: translateX(0px);
+        }
+        to{
+            transform: translateX(100px);
+        }
+    }
+
+    /* Animation fill mode demo */
+
+    /* .box4,.box5,.box6,.box7{
+        height: 100px;
+        width: 100px;
+        background-color: green;
+        z-index: 1;
+        position: relative;
+        animation: color-change 3s ease 1s  forwards;
+    }
+    .box4{
+        animation-fill-mode: none;
+    }
+    .box5{
+        animation-fill-mode:forwards;
+    }
+    .box6{
+       animation-fill-mode:backwards;
+    }
+    .box7{
+        animation-fill-mode:both;
+    }
+
+    @keyframes color-change{
+        from{
+            background-color: red;
+        }
+        to{
+            background-color: aqua;
+        }
+    } */
+
+
+
+}
