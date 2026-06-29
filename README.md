@@ -69,6 +69,29 @@ A responsive login and signup interface inspired by modern authentication pages.
 
 To gain hands-on experience building a complete responsive form interface, understand how transitions improve user experience, and reinforce the integration of JavaScript with CSS for creating dynamic and interactive web components.
 
+### Project 4 – CSS Animation Showcase
+
+A responsive CSS animation showcase built using pure HTML and CSS to demonstrate the core concepts of modern web animations. This project features multiple animation examples, including fading, bouncing, rotating, pulsing, floating, delayed animations, animation directions, fill modes, and pause-on-hover interactions.
+
+### Concepts Practiced
+
+- CSS `@keyframes`
+- Animation shorthand
+- Animation duration and delay
+- Animation iteration count
+- Animation direction (`normal`, `reverse`, `alternate`, `alternate-reverse`)
+- Animation fill modes (`none`, `forwards`, `backwards`, `both`)
+- Animation play state (`running`, `paused`)
+- CSS transforms (`translate`, `rotate`, `scale`)
+- Opacity animations
+- CSS timing functions (`ease`, `ease-in-out`, `linear`)
+- Hover interactions
+- Responsive layouts with Flexbox
+
+### Goal
+
+To build a strong understanding of CSS animations by creating a collection of reusable animation examples. This project reinforces how keyframes, timing, delays, directions, fill modes, and play states work together to produce smooth, interactive user interfaces while laying the foundation for learning GSAP and advanced frontend animations.
+
 ## Learning Outcome
 
-By the end of this week, I will be able to create interactive UI components with smooth animations, understand how motion enhances user experience, and apply modern CSS techniques to build more engaging web interfaces.
+By the end of this week, I will be able to create responsive and interactive user interfaces using CSS transitions, transforms, keyframe animations, and basic JavaScript. I will understand when and how to use modern animation techniques to improve user experience while building a solid foundation for advanced frontend animation libraries such as GSAP.
